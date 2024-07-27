@@ -1,7 +1,7 @@
-package com.versus.versus.vo.statistics;
+package com.versus.versus.domain.valueObject.statistics;
 
-import com.versus.versus.entity.User;
-import com.versus.versus.vo.enums.Gender;
+import com.versus.versus.domain.entity.User;
+import com.versus.versus.domain.valueObject.enums.Gender;
 
 import java.util.List;
 

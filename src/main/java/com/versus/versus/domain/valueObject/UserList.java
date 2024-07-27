@@ -1,8 +1,8 @@
-package com.versus.versus.vo;
+package com.versus.versus.domain.valueObject;
 
-import com.versus.versus.entity.User;
-import com.versus.versus.vo.enums.BloodType;
-import com.versus.versus.vo.enums.Gender;
+import com.versus.versus.domain.entity.User;
+import com.versus.versus.domain.valueObject.enums.BloodType;
+import com.versus.versus.domain.valueObject.enums.Gender;
 
 import java.util.List;
 
@@ -23,5 +23,9 @@ public class UserList {
 
     public List<User> getVotersByAge(int age){
         return voters.stream().filter(voter -> voter.getAge() == age).toList();
+    }
+
+    public Integer getVotersCount() {
+        return voters.size();
     }
 }

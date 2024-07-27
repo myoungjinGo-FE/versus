@@ -1,4 +1,4 @@
-package com.versus.versus.vo.enums;
+package com.versus.versus.domain.valueObject.enums;
 
 public enum Gender {
     MALE("남성"),

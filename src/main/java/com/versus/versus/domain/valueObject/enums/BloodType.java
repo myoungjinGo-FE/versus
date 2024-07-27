@@ -1,4 +1,4 @@
-package com.versus.versus.vo.enums;
+package com.versus.versus.domain.valueObject.enums;
 
 public enum BloodType {
     A("A형"), // A형

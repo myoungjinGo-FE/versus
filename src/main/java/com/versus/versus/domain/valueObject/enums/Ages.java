@@ -1,4 +1,4 @@
-package com.versus.versus.vo.enums;
+package com.versus.versus.domain.valueObject.enums;
 
 public enum Ages {
     AGE_10("10대 이하"),

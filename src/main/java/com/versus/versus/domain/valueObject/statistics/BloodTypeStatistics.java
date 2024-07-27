@@ -1,6 +1,6 @@
-package com.versus.versus.vo.statistics;
+package com.versus.versus.domain.valueObject.statistics;
 
-import com.versus.versus.vo.enums.BloodType;
+import com.versus.versus.domain.valueObject.enums.BloodType;
 
 import java.util.Map;
 import java.util.stream.Collectors;

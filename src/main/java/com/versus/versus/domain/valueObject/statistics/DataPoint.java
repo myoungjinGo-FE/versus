@@ -1,4 +1,4 @@
-package com.versus.versus.vo.statistics;
+package com.versus.versus.domain.valueObject.statistics;
 
 
 public class DataPoint {
