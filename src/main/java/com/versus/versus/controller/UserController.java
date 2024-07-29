@@ -2,8 +2,6 @@ package com.versus.versus.controller;
 
 import com.versus.versus.domain.entity.User;
 import com.versus.versus.domain.service.UserService;
-import com.versus.versus.domain.valueObject.enums.BloodType;
-import com.versus.versus.domain.valueObject.enums.Gender;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,12 +22,11 @@ public class UserController {
             @RequestParam Map<String, String> allRequestParams,
             HttpSession session
     ) {
-        User user = new User(
-                Gender.valueOf(allRequestParams.get("gender")),
-                BloodType.valueOf(allRequestParams.get("bloodType")),
-                Integer.valueOf(allRequestParams.get("age"))
+        User user = userService.registerUser(
+                allRequestParams.get("gender"),
+                allRequestParams.get("age"),
+                allRequestParams.get("bloodType")
         );
-        user.setUserId(1); // TODO
         session.setAttribute("user", user);
         return "redirect:/versus/1";
     }

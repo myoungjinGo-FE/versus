@@ -1,5 +1,6 @@
 package com.versus.versus.domain.entity;
 
+import com.versus.versus.domain.valueObject.Age;
 import com.versus.versus.domain.valueObject.enums.BloodType;
 import com.versus.versus.domain.valueObject.enums.Gender;
 
@@ -7,12 +8,12 @@ public class User {
     private Integer userId;
     private Gender gender;
     private BloodType bloodType;
-    private Integer age;
+    private Age age;
 
     public User(Gender gender, BloodType bloodType, Integer age) {
         this.gender = gender;
         this.bloodType = bloodType;
-        this.age = age;
+        this.age = new Age(age);
     }
 
     public User() {
@@ -27,16 +28,8 @@ public class User {
         return bloodType;
     }
 
-    public int getAge() {
-        if (age < 20) {
-            return 10;
-        } else if (age < 30) {
-            return 20;
-        } else if (age < 40) {
-            return 30;
-        } else {
-            return 40;
-        }
+    public Age getAge() {
+        return age;
     }
 
     public Gender getGender() {
@@ -55,7 +48,8 @@ public class User {
         this.bloodType = bloodType;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setAge(int age) {
+        this.age = new Age(age);
     }
+
 }

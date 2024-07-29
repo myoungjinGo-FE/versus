@@ -22,7 +22,7 @@ public class UserList {
     }
 
     public List<User> getVotersByAge(int age){
-        return voters.stream().filter(voter -> voter.getAge() == age).toList();
+        return voters.stream().filter(voter -> voter.getAge().getAge() == age).toList();
     }
 
     public Integer getVotersCount() {

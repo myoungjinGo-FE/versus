@@ -13,7 +13,12 @@ public class UserServiceImpl implements UserService {
     UserDAO dao;
 
     @Override
-    public void registerUser(User user) {
-        dao.insert(user);
+    public User registerUser(String gender, String age, String bloodType) {
+        User user = dao.select(gender, age, bloodType);
+        if (user == null){
+            dao.insert(gender, age, bloodType);
+            return dao.select(gender, age, bloodType);
+        }
+        return user;
     }
 }
